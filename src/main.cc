@@ -20,7 +20,7 @@ int n_called = 0;
 double f (const std::array<double, N_DIM> &x) {
     ++n_called;
     double res = (x[0] - 1) * (x[0] - 1);
-    for (int i = 2; i < N_DIM; ++i) {
+    for (int i = 1; i < N_DIM; ++i) {
         res += i * (2 * x[i] * x[i] - x[i - 1]) * (2 * x[i] * x[i] - x[i - 1]);
     }
     return res;
